@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCRM-Pluralsight", "CustomCRM-Pluralsight\CustomCRM-Pluralsight.csproj", "{0EBD6304-1931-4671-A848-2BD3ADC92CD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCMS", "CustomCRM-Pluralsight\AcmeCMS.csproj", "{0EBD6304-1931-4671-A848-2BD3ADC92CD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{74360814-C0D7-468C-8E22-1ABF4B95FA40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CSMTest", "Acme.CSMTest\Acme.CSMTest.csproj", "{E9C80288-6362-476C-A227-55A30DC3CCFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{0EBD6304-1931-4671-A848-2BD3ADC92CD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EBD6304-1931-4671-A848-2BD3ADC92CD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EBD6304-1931-4671-A848-2BD3ADC92CD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9C80288-6362-476C-A227-55A30DC3CCFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9C80288-6362-476C-A227-55A30DC3CCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9C80288-6362-476C-A227-55A30DC3CCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9C80288-6362-476C-A227-55A30DC3CCFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9C80288-6362-476C-A227-55A30DC3CCFC} = {74360814-C0D7-468C-8E22-1ABF4B95FA40}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {62E7D4FF-C925-44BF-89CA-7EFB04B3EC99}
