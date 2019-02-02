@@ -8,8 +8,8 @@ namespace Acme.CSMTest
     public class CustomerTest
     {
         private Customer m_customer;
-        private readonly string m_firstName = "Testy";
-        private readonly string m_lastName = "McTesterson";
+        private static readonly string m_firstName = "Testy";
+        private static readonly string m_lastName = "McTesterson";
 
 
         [TestInitialize]
@@ -43,7 +43,6 @@ namespace Acme.CSMTest
 
             // Assert
             Assert.AreEqual(expected, m_customer.FullName);
-
         }
 
         [TestMethod]
@@ -57,7 +56,18 @@ namespace Acme.CSMTest
 
             // Assert
             Assert.AreEqual(expected, m_customer.FullName);
+        }
 
+        [TestMethod]
+        public void CustomerIncrementCount_IsCorrect()
+        {
+            // Arrange
+            var customer1 = new Customer();
+            var customer2 = new Customer();
+            var customer3 = new Customer();
+
+            // Assert
+            Assert.AreEqual(4, Customer.InstanceCount);
         }
     }
 }

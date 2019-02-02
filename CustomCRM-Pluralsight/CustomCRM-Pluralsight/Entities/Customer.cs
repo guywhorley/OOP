@@ -2,6 +2,15 @@
 {
     public class Customer
     {
+
+        public Customer()
+        {
+            InstanceCount++;
+        }
+        /// <summary>
+        /// Number of Customer instances.
+        /// </summary>
+        public static int InstanceCount { get; private set; }
         /// <summary>
         /// First name.
         /// </summary>
