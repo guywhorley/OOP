@@ -1,7 +1,13 @@
 ﻿namespace Acme.CMS.Entities
 {
-    class OrderItem
+    /// <summary>
+    /// OrderItem entity.
+    /// </summary>
+    public class OrderItem
     {
+
+        // TODO: Finish up implementation, header notes
+        // TODO: Add Unit Tests
         public OrderItem()
         {
         }

@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace Acme.CMS.Entities
 {
+    /// <summary>
+    /// Customer entity.
+    /// </summary>
     public class Customer
     {
         #region Constructors
@@ -56,8 +59,6 @@ namespace Acme.CMS.Entities
 
         #endregion
 
-        #region Methods
-
         /// <summary>
         /// Validate that the Customer state is valid. The LastName and EmailAddress
         /// must be non-empty. (not null or whitespace)
@@ -65,39 +66,5 @@ namespace Acme.CMS.Entities
         /// <returns></returns>
         public bool Validate() => (!string.IsNullOrWhiteSpace(LastName) && !string.IsNullOrWhiteSpace(EmailAddress));
 
-        /// <summary>
-        /// Save the customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// Get customer by customerId.
-        /// </summary>
-        /// <param name="customerId"></param>
-        /// <returns></returns>
-        public Customer Retrieve(int customerId)
-        {
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Get all customers.
-        /// </summary>
-        /// <returns></returns>
-        public List<Customer> Retrieve()
-        {
-            return new List<Customer>()
-            {
-                new Customer(),
-                new Customer(),
-                new Customer()
-            };
-        }
-
-        #endregion
     }
 }

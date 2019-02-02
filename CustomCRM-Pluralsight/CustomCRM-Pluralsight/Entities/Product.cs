@@ -2,39 +2,53 @@
 
 namespace Acme.CMS.Entities
 {
-    class Product
+    /// <summary>
+    /// Product entity.
+    /// </summary>
+    public class Product
     {
+        // TODO: Add Unit Tests
+
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public Product()
         {
         }
 
+        /// <summary>
+        /// Create product with given productId.
+        /// </summary>
+        /// <param name="productId"></param>
         public Product(int productId)
         {
             this.ProductId = productId;
         }
 
+        /// <summary>
+        /// Product price.
+        /// </summary>
         public Decimal? CurrentPrice { get; set; }
 
+        /// <summary>
+        /// Product Id.
+        /// </summary>
         public int ProductId { get; private set; }
 
+        /// <summary>
+        /// Product description.
+        /// </summary>
         public string ProductDescription { get; set; }
 
+        /// <summary>
+        /// Product name.
+        /// </summary>
         public string ProductName { get; set; }
 
-        public Product Retrieve(int productId)
-        {
-            return new Product();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
-        {
-            // true: ProductName not empty, CurrentPrice not null
-            return true;
-        }
+        /// <summary>
+        /// Validate required properties.
+        /// </summary>
+        /// <returns></returns>
+        public bool Validate() => !string.IsNullOrWhiteSpace(ProductName) && CurrentPrice != null;
     }
 }

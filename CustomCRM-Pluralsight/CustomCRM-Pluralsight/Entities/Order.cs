@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Acme.CMS.Entities
 {
-    class Order
+    /// <summary>
+    /// Order entity.
+    /// </summary>
+    public class Order
     {
+        // TODO: Finish up implementation, header notes
+        // TODO: Add Unit Tests
+
         public Order()
         {
         }

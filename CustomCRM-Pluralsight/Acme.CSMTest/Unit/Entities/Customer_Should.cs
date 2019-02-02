@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Acme.CSMTest
 {
     [TestClass]
-    public class CustomerTests
+    public class Customer_Should
     {
         private Customer m_customer;
         private static readonly string m_firstName = "Testy";
@@ -26,7 +26,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void Customer_FullName_ConstructedCorrectly()
+        public void Have_FullName_Constructed_Correctly()
         {
             // Arrange
             m_customer.FirstName = m_firstName;
@@ -40,7 +40,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void Customer_FullName_FirstNameEmpty()
+        public void Have_FullName_When_FirstName_Is_Empty()
         {
             // Arrange
             m_customer.LastName = m_lastName;
@@ -53,7 +53,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void Customer_FullName_LastNameEmpty()
+        public void Have_FullName_When_LastName_Is_Empty()
         {
             // Arrange
             m_customer.FirstName = m_firstName;
@@ -66,19 +66,19 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void Customer_IncrementCount_IsCorrect()
+        public void Set_IncrementCount_Correctly()
         {
             // Arrange
             var customer1 = new Customer();
             var customer2 = new Customer();
             var customer3 = new Customer();
 
-            // Assert
+            // Assert (setup adds a single customer)
             Assert.AreEqual(4, Customer.InstanceCount);
         }
 
         [TestMethod]
-        public void Customer_Valid_Validate_ReturnsTrue()
+        public void Pass_Validation_When_Required_Properties_Exist()
         {
             // Arrange
             m_customer.LastName = m_lastName;
@@ -89,7 +89,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void Customer_NoLastName_Validate_ReturnsFalse()
+        public void Fail_Validation_When_Missing_LastName()
         {
             // Arrange
             m_customer.EmailAddress = m_email;
@@ -100,7 +100,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void Customer_NoEmail_Validate_ReturnsFalse()
+        public void Fail_Validation_When_Missing_Email()
         {
             // Assert
             Assert.AreEqual(false, m_customer.Validate());
