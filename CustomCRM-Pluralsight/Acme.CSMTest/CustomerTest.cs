@@ -7,57 +7,56 @@ namespace Acme.CSMTest
     [TestClass]
     public class CustomerTest
     {
+        private Customer m_customer;
+        private readonly string m_firstName = "Testy";
+        private readonly string m_lastName = "McTesterson";
+
+
+        [TestInitialize]
+        public void TestSetup()
+        {
+            m_customer = new Customer();
+        }
+
         [TestMethod]
-        [TestCategory("Valid")]
         public void FullName_IsValid()
         {
             // Arrange
-            Customer customer = new Customer()
-            {
-                FirstName = "Testy",
-                LastName = "McTesterson"
-            };
+            m_customer.FirstName = m_firstName;
+            m_customer.LastName = m_lastName;
 
             // Act
-            string expected = "Testy McTesterson";
+            var expected = "Testy McTesterson";
 
             // Assert
-            Assert.AreEqual(expected, customer.FullName);
+            Assert.AreEqual(expected, m_customer.FullName);
         }
 
         [TestMethod]
-        [TestCategory("Valid")]
         public void FullName_FirstNameEmpty()
         {
             // Arrange
-            Customer customer = new Customer()
-            {
-                LastName = "McTesterson"
-            };
+            m_customer.LastName = m_lastName;
 
             // Act
-            string expected = "McTesterson";
+            var expected = "McTesterson";
 
             // Assert
-            Assert.AreEqual(expected, customer.FullName);
+            Assert.AreEqual(expected, m_customer.FullName);
 
         }
 
         [TestMethod]
-        [TestCategory("Valid")]
         public void FullName_LastNameEmpty()
         {
             // Arrange
-            Customer customer = new Customer()
-            {
-                FirstName = "Testy",
-            };
+            m_customer.FirstName = m_firstName;
 
             // Act
-            string expected = "Testy";
+            var expected = "Testy";
 
             // Assert
-            Assert.AreEqual(expected, customer.FullName);
+            Assert.AreEqual(expected, m_customer.FullName);
 
         }
     }
