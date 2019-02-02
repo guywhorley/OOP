@@ -87,7 +87,7 @@ namespace Acme.CSMTest
             // Assert
             Assert.AreEqual(true, m_customer.Validate());
         }
-        
+
         [TestMethod]
         public void Customer_NoLastName_Validate_ReturnsFalse()
         {
@@ -104,6 +104,26 @@ namespace Acme.CSMTest
         {
             // Assert
             Assert.AreEqual(false, m_customer.Validate());
+        }
+
+        [TestMethod]
+        public void RetrieveById_ReturnsCustomer()
+        {
+            // Act
+            var result = m_customer.Retrieve(123);
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void RetrieveCustomerList()
+        {
+            // Act
+            var results = m_customer.Retrieve();
+
+            // Assert
+            Assert.IsTrue(results.Count == 3);
         }
     }
 }
