@@ -5,11 +5,26 @@ namespace Acme.CMS.Entities
 {
     public class Customer
     {
+        #region Constructors
 
+        /// <summary>
+        /// The DEFAULT constructor.
+        /// </summary>
         public Customer()
         {
             InstanceCount++;
         }
+
+        /// <summary>
+        /// Customer with given customerId.
+        /// </summary>
+        /// <param name="customerId"></param>
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
+
+        #endregion
 
         #region Properties
 
@@ -84,7 +99,5 @@ namespace Acme.CMS.Entities
         }
 
         #endregion
-
-
     }
 }
