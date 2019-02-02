@@ -10,6 +10,7 @@ namespace Acme.CSMTest
         private Customer m_customer;
         private static readonly string m_firstName = "Testy";
         private static readonly string m_lastName = "McTesterson";
+        private static readonly string m_email = "Testy@McTesterson.org";
 
 
         [TestInitialize]
@@ -25,7 +26,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void FullName_IsValid()
+        public void Customer_FullName_ConstructedCorrectly()
         {
             // Arrange
             m_customer.FirstName = m_firstName;
@@ -39,7 +40,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void FullName_FirstNameEmpty()
+        public void Customer_FullName_FirstNameEmpty()
         {
             // Arrange
             m_customer.LastName = m_lastName;
@@ -52,7 +53,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void FullName_LastNameEmpty()
+        public void Customer_FullName_LastNameEmpty()
         {
             // Arrange
             m_customer.FirstName = m_firstName;
@@ -65,7 +66,7 @@ namespace Acme.CSMTest
         }
 
         [TestMethod]
-        public void CustomerIncrementCount_IsCorrect()
+        public void Customer_IncrementCount_IsCorrect()
         {
             // Arrange
             var customer1 = new Customer();
@@ -74,6 +75,35 @@ namespace Acme.CSMTest
 
             // Assert
             Assert.AreEqual(4, Customer.InstanceCount);
+        }
+
+        [TestMethod]
+        public void Customer_Valid_Validate_ReturnsTrue()
+        {
+            // Arrange
+            m_customer.LastName = m_lastName;
+            m_customer.EmailAddress = m_email;
+
+            // Assert
+            Assert.AreEqual(true, m_customer.Validate());
+        }
+        
+        [TestMethod]
+        public void Customer_NoLastName_Validate_ReturnsFalse()
+        {
+            // Arrange
+            m_customer.EmailAddress = m_email;
+            m_customer.LastName = String.Empty;
+
+            // Assert
+            Assert.AreEqual(false, m_customer.Validate());
+        }
+
+        [TestMethod]
+        public void Customer_NoEmail_Validate_ReturnsFalse()
+        {
+            // Assert
+            Assert.AreEqual(false, m_customer.Validate());
         }
     }
 }

@@ -7,6 +7,9 @@
         {
             InstanceCount++;
         }
+
+        #region Properties
+
         /// <summary>
         /// Number of Customer instances.
         /// </summary>
@@ -32,6 +35,19 @@
         /// CustomerId.
         /// </summary>
         public int CustomerId { get; private set; }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Validate that the Customer state is valid. The LastName and EmailAddress
+        /// must be non-empty. (not null or whitespace)
+        /// </summary>
+        /// <returns></returns>
+        public bool Validate() => (!string.IsNullOrWhiteSpace(LastName) && !string.IsNullOrWhiteSpace(EmailAddress));
+
+        #endregion
 
 
     }
