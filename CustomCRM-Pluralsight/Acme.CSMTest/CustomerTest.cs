@@ -18,6 +18,12 @@ namespace Acme.CSMTest
             m_customer = new Customer();
         }
 
+        [TestCleanup]
+        public void TestCleanup()
+        {
+            Customer.InstanceCount = 0;
+        }
+
         [TestMethod]
         public void FullName_IsValid()
         {

@@ -10,7 +10,7 @@
         /// <summary>
         /// Number of Customer instances.
         /// </summary>
-        public static int InstanceCount { get; private set; }
+        public static int InstanceCount { get; set; }
         /// <summary>
         /// First name.
         /// </summary>
