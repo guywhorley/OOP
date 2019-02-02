@@ -25,7 +25,7 @@ namespace Acme.CSMTest.Unit.Repositories
         }
 
         [TestMethod]
-        public void Retrieve_Existing_Prodcut_By_Id()
+        public void Retrieve_Product_By_Id()
         {
             Assert.AreEqual(m_productName, m_productRepository.Retrieve(2).ProductName);
         }
@@ -38,6 +38,12 @@ namespace Acme.CSMTest.Unit.Repositories
 
             // Assert
             Assert.AreEqual(3, products.Count);
+        }
+
+        [TestMethod]
+        public void Return_True_On_Save()
+        {
+            Assert.AreEqual(true, m_productRepository.Save());
         }
     }
 }

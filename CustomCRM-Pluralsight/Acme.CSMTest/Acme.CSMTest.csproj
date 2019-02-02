@@ -50,12 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unit\Entities\Customer_Should.cs" />
-    <Compile Include="Unit\Entities\OrderItem_Should.cs" />
-    <Compile Include="Unit\Entities\Order_Should.cs" />
-    <Compile Include="Unit\Entities\Product_Should.cs" />
-    <Compile Include="Unit\Repositories\CustomerRespository_Should.cs" />
-    <Compile Include="Unit\Repositories\ProductRepository_Should.cs" />
+    <Compile Include="Unit\Entities\CustomerTests.cs" />
+    <Compile Include="Unit\Entities\OrderItemTests.cs" />
+    <Compile Include="Unit\Entities\OrderTests.cs" />
+    <Compile Include="Unit\Entities\ProductTests.cs" />
+    <Compile Include="Unit\Repositories\CustomerRespositoryTests.cs" />
+    <Compile Include="Unit\Repositories\ProductRepositoryTests.cs" />
+    <Compile Include="Unit\Repositories\OrderRespositoryTests.cs" />
+    <Compile Include="Unit\Repositories\OrderItemRespositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Acme.CMS.Entities;
 
 namespace Acme.CMS.Repositories
@@ -12,6 +8,12 @@ namespace Acme.CMS.Repositories
     /// </summary>
     public class ProductRepository
     {
+        /// <summary>
+        /// Save the product.
+        /// </summary>
+        /// <returns></returns>
+        public bool Save() => true;
+
         /// <summary>
         /// Retrieve one product.
         /// </summary>
@@ -25,6 +27,7 @@ namespace Acme.CMS.Repositories
             {
                 product.ProductName = "Sunflowers";
                 product.ProductDescription = "Assorted sizes.";
+                product.CurrentPrice = 15.96M;
             }
             return product;
         }
@@ -43,6 +46,5 @@ namespace Acme.CMS.Repositories
                 new Product(789)
             };
         }
-
     }
 }

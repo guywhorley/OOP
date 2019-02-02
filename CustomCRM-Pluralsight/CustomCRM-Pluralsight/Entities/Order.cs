@@ -11,36 +11,35 @@ namespace Acme.CMS.Entities
     /// </summary>
     public class Order
     {
-        // TODO: Finish up implementation, header notes
-        // TODO: Add Unit Tests
-
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public Order()
         {
         }
-
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="orderId"></param>
         public Order(int orderId)
         {
             this.OrderId = orderId;
         }
 
+        /// <summary>
+        /// Order Id.
+        /// </summary>
         public int OrderId { get; private set; }
 
+        /// <summary>
+        /// Order date.
+        /// </summary>
         public DateTimeOffset? OrderDate { get; set; }
 
-        public Order Retrieve(int orderId)
-        {
-            return new Order();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
-        public bool Validate()
-        {
-            // true: orderData not null, 
-            return true;
-        }
+        /// <summary>
+        /// Validate that required properties are set.
+        /// </summary>
+        /// <returns></returns>
+        public bool Validate() => OrderDate != null;
     }
 }

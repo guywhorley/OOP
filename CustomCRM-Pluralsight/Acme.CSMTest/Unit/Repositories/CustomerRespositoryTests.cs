@@ -25,7 +25,7 @@ namespace Acme.CSMTest.Unit.Repositories
         }
 
         [TestMethod]
-        public void Retrieve_Existing_Customer_By_Id()
+        public void Retrieve_Customer_By_Id()
         {
             Assert.AreEqual(m_lastName, m_customerRepository.Retrieve(1).LastName);
         }
@@ -38,6 +38,12 @@ namespace Acme.CSMTest.Unit.Repositories
 
             // Assert
             Assert.AreEqual(3, customers.Count);
+        }
+
+        [TestMethod]
+        public void Return_True_On_Save()
+        {
+            Assert.AreEqual(true, m_customerRepository.Save());
         }
     }
 }

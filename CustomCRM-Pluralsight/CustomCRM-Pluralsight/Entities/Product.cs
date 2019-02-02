@@ -7,17 +7,15 @@ namespace Acme.CMS.Entities
     /// </summary>
     public class Product
     {
-        // TODO: Add Unit Tests
-
         /// <summary>
-        /// Default constructor.
+        /// Constructor.
         /// </summary>
         public Product()
         {
         }
 
         /// <summary>
-        /// Create product with given productId.
+        /// Constructor.
         /// </summary>
         /// <param name="productId"></param>
         public Product(int productId)

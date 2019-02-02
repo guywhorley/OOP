@@ -5,41 +5,51 @@
     /// </summary>
     public class OrderItem
     {
-
-        // TODO: Finish up implementation, header notes
-        // TODO: Add Unit Tests
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public OrderItem()
         {
         }
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="orderItemId"></param>
         public OrderItem(int orderItemId)
         {
             this.OrderItemId = orderItemId;
         }
 
+        /// <summary>
+        /// OrderItem Id.
+        /// </summary>
         public int OrderItemId { get; private set; }
 
+        /// <summary>
+        /// Order quantity.
+        /// </summary>
         public int OrderQuantity { get; set; }
 
+        /// <summary>
+        /// Product Id.
+        /// </summary>
         public int ProductId { get; set; }
 
+        /// <summary>
+        /// Purchase price.
+        /// </summary>
         public decimal? PurchasePrice { get; set; }
 
-        public OrderItem Retrieve(int orderItemId)
-        {
-            return new OrderItem();
-        }
-
-        public bool Save()
-        {
-            return true;
-        }
-
+        /// <summary>
+        /// Validate that required properties are set.
+        /// </summary>
+        /// <returns></returns>
         public bool Validate()
         {
-            // true: orderQuantity > 0, ProductId > 0, PurchasePrice not null
-            return true;
+            return OrderQuantity > 0 &&
+                   ProductId > 0 &&
+                   PurchasePrice != null;
         }
-    
     }
 }

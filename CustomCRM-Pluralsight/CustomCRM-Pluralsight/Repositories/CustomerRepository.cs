@@ -12,10 +12,7 @@ namespace Acme.CMS.Repositories
         /// Save the customer.
         /// </summary>
         /// <returns></returns>
-        public bool Save()
-        {
-            return true;
-        }
+        public bool Save() => true;
 
         /// <summary>
         /// Retrieve one customer.
