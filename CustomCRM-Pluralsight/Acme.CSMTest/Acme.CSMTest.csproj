@@ -59,6 +59,7 @@
     <Compile Include="Unit\Repositories\ProductRepositoryTests.cs" />
     <Compile Include="Unit\Repositories\OrderRespositoryTests.cs" />
     <Compile Include="Unit\Repositories\OrderItemRespositoryTests.cs" />
+    <Compile Include="Unit\Repositories\AddressRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
