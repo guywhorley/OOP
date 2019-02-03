@@ -9,8 +9,6 @@ namespace Acme.CMS.Entities
     /// </summary>
     public class Customer
     {
-        private AddressRepository m_addressRepository;
-
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -24,10 +22,8 @@ namespace Acme.CMS.Entities
         /// <param name="customerId"></param>
         public Customer(int customerId)
         {
-            m_addressRepository = new AddressRepository();
             InstanceCount++;
             this.CustomerId = customerId;
-            AddressList = new List<Address>();
         }
 
         /// <summary>
@@ -38,7 +34,7 @@ namespace Acme.CMS.Entities
         /// <summary>
         /// List of customer's addresses.
         /// </summary>
-        public List<Address> AddressList { get; set; }
+        public List<Address> AddressList { get; set; } = new List<Address>();
 
         /// <summary>
         /// First name.

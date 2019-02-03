@@ -68,6 +68,8 @@ namespace Acme.CSMTest.Unit.Repositories
             }
         }
 
+        #region Private
+
         private void setupExpectedCustomer()
         {
             // the test data mirrors the test data structure in the AddressRepository
@@ -103,5 +105,7 @@ namespace Acme.CSMTest.Unit.Repositories
                 }
             };
         }
+
+        #endregion
     }
 }
