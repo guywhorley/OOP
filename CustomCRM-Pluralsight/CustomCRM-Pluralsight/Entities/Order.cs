@@ -27,9 +27,24 @@ namespace Acme.CMS.Entities
         }
 
         /// <summary>
+        /// CustomerId of customer associated with the order.
+        /// </summary>
+        public int CustomerId { get; set; }
+
+        /// <summary>
+        /// Shipping address for the order.
+        /// </summary>
+        public int ShippingAddressId { get; set; }
+
+        /// <summary>
         /// Order Id.
         /// </summary>
         public int OrderId { get; private set; }
+
+        /// <summary>
+        /// OrderItems associated with the order.
+        /// </summary>
+        public List<OrderItem> OrderItems { get; set; }
 
         /// <summary>
         /// Order date.

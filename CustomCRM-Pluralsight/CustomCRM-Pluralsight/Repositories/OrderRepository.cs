@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.CMS.BusinessModels;
 using Acme.CMS.Entities;
 
 namespace Acme.CMS.Repositories
@@ -44,6 +45,60 @@ namespace Acme.CMS.Repositories
                 new Order(456),
                 new Order(789)
             };
+        }
+
+        /// <summary>
+        /// Retrieve OrderDisplay for given orderId.
+        /// </summary>
+        /// <param name="orderId"></param>
+        /// <returns></returns>
+        public OrderDisplay RetrieveOrderDisplay(int orderId)
+        {
+            OrderDisplay orderDisplay = new OrderDisplay();
+
+            // code that retrieves defined order fields
+
+            // for testing - set basic orderDisplay info
+            if (orderId == 10)
+            {
+                orderDisplay.FirstName = "Bilbo";
+                orderDisplay.LastName = "Baggins";
+                orderDisplay.OrderDate = new DateTimeOffset();
+                orderDisplay.ShippingAddress = new Address()
+                {
+                    AddressType = AddressType.Work,
+                    StreetLine1 = "Bag End",
+                    StreetLine2 = "Bagshot row",
+                    City = "Hobbiton",
+                    State = "Shire",
+                    Country = "Middle Earth",
+                    PostalCode = "144"
+                };
+            }
+
+            orderDisplay.OrderDisplayItemList = new List<OrderDisplayItem>();
+            //code that retrieves the order items
+
+            // testing - set orderItem info
+            if (orderId == 10)
+            {
+                var orderDisplayItem = new OrderDisplayItem()
+                {
+                    ProductName = "Sunflowers",
+                    PurchasePrice = 15.96M,
+                    OrderQuantity = 2
+                };
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
+
+                orderDisplayItem = new OrderDisplayItem()
+                {
+                    ProductName = "Rake",
+                    PurchasePrice = 6M,
+                    OrderQuantity = 1
+                };
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
+            }
+            return orderDisplay;
         }
     }
 }
