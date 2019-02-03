@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Acme.CMS.Entities;
+using System.Linq;
 
 namespace Acme.CMS.Repositories
 {
@@ -8,6 +9,14 @@ namespace Acme.CMS.Repositories
     /// </summary>
     public class CustomerRepository
     {
+        private AddressRepository m_addressRepository { get; set;}
+
+        public CustomerRepository()
+        {
+            // has-a
+            m_addressRepository = new AddressRepository();
+        }
+
         /// <summary>
         /// Save the customer.
         /// </summary>
@@ -21,7 +30,9 @@ namespace Acme.CMS.Repositories
         /// <returns></returns>
         public Customer Retrieve(int customerId)
         {
-            var customer = new Customer(customerId);
+            Customer customer = new Customer(customerId);
+            customer.AddressList = m_addressRepository.
+                RetrieveByCustomerId(customerId).ToList(); // ToList converts the IEnumerable
 
             // temp hard-code values to return a populated customer.
             // this should come from a data store.

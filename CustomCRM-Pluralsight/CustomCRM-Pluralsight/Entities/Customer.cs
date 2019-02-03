@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.CMS.Repositories;
 
 namespace Acme.CMS.Entities
 {
@@ -8,12 +9,13 @@ namespace Acme.CMS.Entities
     /// </summary>
     public class Customer
     {
+        private AddressRepository m_addressRepository;
+
         /// <summary>
         /// Constructor.
         /// </summary>
-        public Customer()
+        public Customer() : this(0) // Note: calls another constructor
         {
-            InstanceCount++;
         }
 
         /// <summary>
@@ -22,13 +24,21 @@ namespace Acme.CMS.Entities
         /// <param name="customerId"></param>
         public Customer(int customerId)
         {
+            m_addressRepository = new AddressRepository();
+            InstanceCount++;
             this.CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
         /// <summary>
         /// Number of Customer instances.
         /// </summary>
         public static int InstanceCount { get; set; }
+
+        /// <summary>
+        /// List of customer's addresses.
+        /// </summary>
+        public List<Address> AddressList { get; set; }
 
         /// <summary>
         /// First name.

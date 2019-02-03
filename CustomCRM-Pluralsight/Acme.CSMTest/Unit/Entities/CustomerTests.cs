@@ -105,5 +105,12 @@ namespace Acme.CSMTest
             // Assert
             Assert.AreEqual(false, m_customer.Validate());
         }
+
+        [TestMethod]
+        public void Return_An_Empty_List_Of_Addresses()
+        {
+            Assert.IsNotNull(m_customer.AddressList);
+            Assert.AreEqual(0, m_customer.AddressList.Count);
+        }
     }
 }

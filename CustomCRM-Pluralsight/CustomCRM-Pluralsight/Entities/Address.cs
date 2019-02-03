@@ -35,7 +35,7 @@ namespace Acme.CMS.Entities
         /// <summary>
         /// Address Type.
         /// </summary>
-        public int AddressType { get; set; }
+        public AddressType AddressType { get; set; }
 
         /// <summary>
         /// Address StreetLine 1.
