@@ -13,7 +13,24 @@ namespace Acme.CMS.Repositories
         /// Save the Address.
         /// </summary>
         /// <returns></returns>
-        public bool Save(Address address) => true;
+        public bool Save(Address address)
+        {
+            // setting true for testing
+            var success = true;
+
+            if (address.HasChanges && address.IsValid)
+            {
+                if (address.IsNew)
+                {
+                    // call an insert operation
+                }
+                else
+                {
+                    // call an update operation
+                }
+            }
+            return success;
+        }
 
         /// <summary>
         /// Retrieve one address.

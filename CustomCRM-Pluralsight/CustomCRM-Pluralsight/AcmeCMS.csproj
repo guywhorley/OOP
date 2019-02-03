@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\CustomerType.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Views\OrderDisplay.cs" />
     <Compile Include="Views\OrderDisplayItem.cs" />
     <Compile Include="Entities\Address.cs" />

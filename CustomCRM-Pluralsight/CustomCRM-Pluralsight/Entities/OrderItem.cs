@@ -3,7 +3,7 @@
     /// <summary>
     /// OrderItem entity.
     /// </summary>
-    public class OrderItem
+    public class OrderItem : EntityBase
     {
         /// <summary>
         /// Constructor.
@@ -47,7 +47,7 @@
         /// Validate that required properties are set.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             return OrderQuantity > 0 &&
                    ProductId > 0 &&

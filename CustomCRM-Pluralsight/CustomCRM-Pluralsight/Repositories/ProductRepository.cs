@@ -12,7 +12,24 @@ namespace Acme.CMS.Repositories
         /// Save the product.
         /// </summary>
         /// <returns></returns>
-        public bool Save(Product product) => true;
+        public bool Save(Product product)
+        {
+            // setting true for testing
+            var success = true;
+
+            if (product.HasChanges && product.IsValid)
+            {
+                if (product.IsNew)
+                {
+                    // call an insert operation
+                }
+                else
+                {
+                    // call an update operation
+                }
+            }
+            return success;
+        }
 
         /// <summary>
         /// Retrieve one product.

@@ -14,7 +14,24 @@ namespace Acme.CMS.Repositories
         /// Save the order.
         /// </summary>
         /// <returns></returns>
-        public bool Save(Order order) => true;
+        public bool Save(Order order)
+        {
+            // setting true for testing
+            var success = true;
+
+            if (order.HasChanges && order.IsValid)
+            {
+                if (order.IsNew)
+                {
+                    // call an insert operation
+                }
+                else
+                {
+                    // call an update operation
+                }
+            }
+            return success;
+        }
 
         /// <summary>
         /// Retrieve one order.

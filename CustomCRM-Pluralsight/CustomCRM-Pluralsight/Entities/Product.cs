@@ -5,7 +5,7 @@ namespace Acme.CMS.Entities
     /// <summary>
     /// Product entity.
     /// </summary>
-    public class Product
+    public class Product : EntityBase
     {
         /// <summary>
         /// Constructor.
@@ -20,7 +20,7 @@ namespace Acme.CMS.Entities
         /// <param name="productId"></param>
         public Product(int productId)
         {
-            this.ProductId = productId;
+            ProductId = productId;
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Acme.CMS.Entities
         /// Validate required properties.
         /// </summary>
         /// <returns></returns>
-        public bool Validate() => !string.IsNullOrWhiteSpace(ProductName) && CurrentPrice != null;
+       public override bool Validate() => !string.IsNullOrWhiteSpace(ProductName) && CurrentPrice != null;
 
         public override string ToString() => $"Id:{ProductId}, Name:{ProductName}, Price:{CurrentPrice}";
     }

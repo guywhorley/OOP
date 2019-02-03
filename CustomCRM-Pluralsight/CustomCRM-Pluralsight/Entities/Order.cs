@@ -9,7 +9,7 @@ namespace Acme.CMS.Entities
     /// <summary>
     /// Order entity.
     /// </summary>
-    public class Order
+    public class Order : EntityBase
     {
         /// <summary>
         /// Constructor.
@@ -59,7 +59,7 @@ namespace Acme.CMS.Entities
         /// Validate that required properties are set.
         /// </summary>
         /// <returns></returns>
-        public bool Validate() => OrderDate != null;
+        public override bool Validate() => OrderDate != null;
 
         ///  <inheritdoc />
         public override string ToString() => $"OrderId:{OrderId}, OrderDate:{OrderDate}";

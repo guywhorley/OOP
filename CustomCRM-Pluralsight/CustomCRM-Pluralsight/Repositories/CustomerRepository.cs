@@ -21,7 +21,24 @@ namespace Acme.CMS.Repositories
         /// Save the customer.
         /// </summary>
         /// <returns></returns>
-        public bool Save(Customer customer) => true;
+        public bool Save(Customer customer)
+        {
+            // setting true for testing
+            var success = true;
+
+            if (customer.HasChanges && customer.IsValid)
+            {
+                if (customer.IsNew)
+                {
+                    // call an insert operation
+                }
+                else
+                {
+                    // call an update operation
+                }
+            }
+            return success;
+        }
 
         /// <summary>
         /// Retrieve one customer.

@@ -9,7 +9,7 @@ namespace Acme.CMS.Entities
     /// <summary>
     /// Address class for all things addressy.
     /// </summary>
-    public class Address
+    public class Address : EntityBase
     {
         /// <summary>
         /// Constructor.
@@ -68,5 +68,10 @@ namespace Acme.CMS.Entities
         /// Address Country.
         /// </summary>
         public string Country { get; set; }
+
+        public override bool Validate()
+        {
+            return AddressId != null;
+        }
     }
 }

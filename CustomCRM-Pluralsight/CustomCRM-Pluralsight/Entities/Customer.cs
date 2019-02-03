@@ -7,7 +7,7 @@ namespace Acme.CMS.Entities
     /// <summary>
     /// Customer entity.
     /// </summary>
-    public class Customer
+    public class Customer : EntityBase
     {
         /// <summary>
         /// Constructor.
@@ -74,7 +74,9 @@ namespace Acme.CMS.Entities
         /// must be non-empty. (not null or whitespace)
         /// </summary>
         /// <returns></returns>
-        public bool Validate() => (!string.IsNullOrWhiteSpace(LastName) && !string.IsNullOrWhiteSpace(EmailAddress));
+        public override bool Validate() =>
+            (!string.IsNullOrWhiteSpace(LastName) &&
+             !string.IsNullOrWhiteSpace(EmailAddress));
 
     }
 }
