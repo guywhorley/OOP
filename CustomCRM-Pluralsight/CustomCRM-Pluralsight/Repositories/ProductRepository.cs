@@ -23,12 +23,11 @@ namespace Acme.CMS.Repositories
         {
             // for testing
             Product product = new Product(productId);
-            if (productId == 2)
-            {
-                product.ProductName = "Sunflowers";
-                product.ProductDescription = "Assorted sizes.";
-                product.CurrentPrice = 15.96M;
-            }
+            if (productId != 2) return product;
+
+            product.ProductName = "Sunflowers";
+            product.ProductDescription = "Assorted sizes.";
+            product.CurrentPrice = 15.96M;
             return product;
         }
 

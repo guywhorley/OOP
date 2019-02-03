@@ -48,5 +48,7 @@ namespace Acme.CMS.Entities
         /// </summary>
         /// <returns></returns>
         public bool Validate() => !string.IsNullOrWhiteSpace(ProductName) && CurrentPrice != null;
+
+        public override string ToString() => $"Id:{ProductId}, Name:{ProductName}, Price:{CurrentPrice}";
     }
 }

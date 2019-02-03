@@ -26,6 +26,8 @@ namespace Acme.CMS.Entities
             this.CustomerId = customerId;
         }
 
+        public override string ToString() => $"CustomerId:{CustomerId}, FullName:{FullName}";
+
         /// <summary>
         /// Customer type.
         /// </summary>

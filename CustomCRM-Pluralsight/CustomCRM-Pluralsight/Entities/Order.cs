@@ -17,6 +17,7 @@ namespace Acme.CMS.Entities
         public Order()
         {
         }
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -59,5 +60,9 @@ namespace Acme.CMS.Entities
         /// </summary>
         /// <returns></returns>
         public bool Validate() => OrderDate != null;
+
+        ///  <inheritdoc />
+        public override string ToString() => $"OrderId:{OrderId}, OrderDate:{OrderDate}";
     }
 }
+    

@@ -27,6 +27,8 @@ namespace Acme.CMS.Entities
             this.AddressId = addressId;
         }
 
+        public override string ToString() => $"Id:{AddressId}, Type:{AddressType}";
+
         /// <summary>
         /// Address Id.
         /// </summary>

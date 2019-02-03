@@ -12,6 +12,8 @@
         {
         }
 
+        public override string ToString() => $"OrderItemId:{OrderItemId}";
+
         /// <summary>
         /// Constructor.
         /// </summary>
