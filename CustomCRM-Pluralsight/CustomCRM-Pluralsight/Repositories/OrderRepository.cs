@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Acme.CMS.BusinessModels;
 using Acme.CMS.Entities;
+using Acme.CMS.Views;
 
 namespace Acme.CMS.Repositories
 {

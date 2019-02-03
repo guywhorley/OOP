@@ -27,6 +27,11 @@ namespace Acme.CMS.Entities
         }
 
         /// <summary>
+        /// Customer type.
+        /// </summary>
+        public CustomerType CustomerType { get; set; }
+
+        /// <summary>
         /// Number of Customer instances.
         /// </summary>
         public static int InstanceCount { get; set; }

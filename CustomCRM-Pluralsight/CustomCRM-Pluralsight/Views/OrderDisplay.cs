@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Acme.CMS.Entities;
 
-namespace Acme.CMS.BusinessModels
+namespace Acme.CMS.Views
 {
     //TODO: Finish comments
     /// <summary>

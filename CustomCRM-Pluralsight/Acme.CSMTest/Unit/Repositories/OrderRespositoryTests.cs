@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Acme.CMS.BusinessModels;
 using Acme.CMS.Entities;
 using Acme.CMS.Repositories;
+using Acme.CMS.Views;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Acme.CSMTest.Unit.Repositories
