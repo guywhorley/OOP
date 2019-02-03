@@ -27,7 +27,7 @@ namespace Acme.CSMTest.Unit.Repositories
         [TestMethod]
         public void Return_True_On_Save()
         {
-            Assert.IsTrue(m_orderItemRepository.Save());
+            Assert.IsTrue(m_orderItemRepository.Save(m_orderItemRepository.Retrieve(m_testId)));
         }
 
         [TestMethod]

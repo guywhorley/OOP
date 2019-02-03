@@ -13,7 +13,7 @@ namespace Acme.CMS.Repositories
         /// Save the Address.
         /// </summary>
         /// <returns></returns>
-        public bool Save() => true;
+        public bool Save(Address address) => true;
 
         /// <summary>
         /// Retrieve one customer.

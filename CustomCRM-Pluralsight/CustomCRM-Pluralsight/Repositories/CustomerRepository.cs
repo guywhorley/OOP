@@ -12,7 +12,7 @@ namespace Acme.CMS.Repositories
         /// Save the customer.
         /// </summary>
         /// <returns></returns>
-        public bool Save() => true;
+        public bool Save(Customer customer) => true;
 
         /// <summary>
         /// Retrieve one customer.
@@ -23,6 +23,8 @@ namespace Acme.CMS.Repositories
         {
             var customer = new Customer(customerId);
 
+            // temp hard-code values to return a populated customer.
+            // this should come from a data store.
             if (customerId == 1)
             {
                 customer.EmailAddress = "Testy@McTesterson.org";
@@ -38,6 +40,7 @@ namespace Acme.CMS.Repositories
         /// <returns></returns>
         public List<Customer> Retrieve()
         {
+            // temp hard-code to return a list. Should come from data store.
             return new List<Customer>()
             {
                 new Customer(123),

@@ -11,6 +11,7 @@ namespace Acme.CSMTest.Unit.Repositories
     {
         private ProductRepository m_productRepository;
         private readonly string m_productName = "Sunflowers";
+        private readonly int m_testId = 2;
 
         [TestInitialize]
         public void TestSetup()
@@ -27,7 +28,7 @@ namespace Acme.CSMTest.Unit.Repositories
         [TestMethod]
         public void Retrieve_Product_By_Id()
         {
-            Assert.AreEqual(m_productName, m_productRepository.Retrieve(2).ProductName);
+            Assert.AreEqual(m_productName, m_productRepository.Retrieve(m_testId).ProductName);
         }
 
         [TestMethod]
@@ -43,7 +44,7 @@ namespace Acme.CSMTest.Unit.Repositories
         [TestMethod]
         public void Return_True_On_Save()
         {
-            Assert.AreEqual(true, m_productRepository.Save());
+            Assert.AreEqual(true, m_productRepository.Save(m_productRepository.Retrieve(m_testId)));
         }
     }
 }

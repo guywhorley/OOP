@@ -25,9 +25,9 @@ namespace Acme.CSMTest.Unit.Repositories
         }
 
         [TestMethod]
-        public void Return_True_On_Save1()
+        public void Return_True_On_Save()
         {
-            Assert.IsTrue(m_addressRepository.Save());
+            Assert.IsTrue(m_addressRepository.Save(m_addressRepository.Retrieve(m_testId)));
         }
 
         [TestMethod]

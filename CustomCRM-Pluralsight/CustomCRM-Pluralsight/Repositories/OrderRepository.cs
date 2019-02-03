@@ -13,7 +13,7 @@ namespace Acme.CMS.Repositories
         /// Save the order.
         /// </summary>
         /// <returns></returns>
-        public bool Save() => true;
+        public bool Save(Order order) => true;
 
         /// <summary>
         /// Retrieve one order.

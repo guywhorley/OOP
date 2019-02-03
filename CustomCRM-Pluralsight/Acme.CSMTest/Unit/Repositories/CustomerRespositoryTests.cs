@@ -11,6 +11,7 @@ namespace Acme.CSMTest.Unit.Repositories
     {
         private CustomerRepository m_customerRepository;
         private readonly string m_lastName = "McTesterson";
+        private readonly int m_testId = 1;
 
         [TestInitialize]
         public void TestSetup()
@@ -27,7 +28,7 @@ namespace Acme.CSMTest.Unit.Repositories
         [TestMethod]
         public void Retrieve_Customer_By_Id()
         {
-            Assert.AreEqual(m_lastName, m_customerRepository.Retrieve(1).LastName);
+            Assert.AreEqual(m_lastName, m_customerRepository.Retrieve(m_testId).LastName);
         }
 
         [TestMethod]
@@ -43,7 +44,7 @@ namespace Acme.CSMTest.Unit.Repositories
         [TestMethod]
         public void Return_True_On_Save()
         {
-            Assert.AreEqual(true, m_customerRepository.Save());
+            Assert.AreEqual(true, m_customerRepository.Save(m_customerRepository.Retrieve(m_testId)));
         }
     }
 }
