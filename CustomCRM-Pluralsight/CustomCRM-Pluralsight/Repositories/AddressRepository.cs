@@ -27,15 +27,14 @@ namespace Acme.CMS.Repositories
             //code that retrieves the defined addresses
 
             // for testing
-            if (addressId == 1)
-            {
-                address.StreetLine1 = "123 4th Ave NE";
-                address.City = "Testville";
-                address.State = "Test";
-                address.Country = "USA";
-                address.PostalCode = "55555";
-                address.AddressType = AddressType.Home;
-            }
+            if (addressId != 1) return address;
+
+            address.StreetLine1 = "123 4th Ave NE";
+            address.City = "Testville";
+            address.State = "Test";
+            address.Country = "USA";
+            address.PostalCode = "55555";
+            address.AddressType = AddressType.Home;
             return address;
         }
 

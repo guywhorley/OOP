@@ -26,6 +26,8 @@ namespace Acme.CMS.Entities
             this.OrderId = orderId;
         }
 
+        // Note: composition 'has-a' using ObjectId reference.
+
         /// <summary>
         /// CustomerId of customer associated with the order.
         /// </summary>
@@ -41,6 +43,7 @@ namespace Acme.CMS.Entities
         /// </summary>
         public int OrderId { get; private set; }
 
+        // Note: composition i.e. has-a by containing the entire object.
         /// <summary>
         /// OrderItems associated with the order.
         /// </summary>

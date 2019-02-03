@@ -36,6 +36,7 @@ namespace Acme.CMS.Entities
         /// </summary>
         public static int InstanceCount { get; set; }
 
+        // Note: Example of composition i.e. "has a", in this case, Custom has a list of addresses
         /// <summary>
         /// List of customer's addresses.
         /// </summary>
