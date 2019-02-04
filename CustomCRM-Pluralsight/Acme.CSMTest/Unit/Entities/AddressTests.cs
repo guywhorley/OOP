@@ -20,6 +20,7 @@ namespace Acme.Test.Unit.Entities
         {
             m_address = null;
         }
+
         [TestMethod]
         public void Have_Been_Created_With_Assigned_AddressId()
         {

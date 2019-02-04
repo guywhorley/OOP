@@ -9,13 +9,15 @@ namespace Acme.Test.Unit.Entities
         private Product m_product;
         private Product m_invalidProduct;
         private readonly int m_testId = 123;
+        private readonly string m_testNameWithNoSpaces = "TestProduct";
+        private readonly string m_testNameWithSpaces = "Test Product";
 
         [TestInitialize]
         public void TestSetup()
         {
             m_product = new Product(m_testId)
             {
-                ProductName = "Test Product",
+                ProductName = m_testNameWithNoSpaces,
                 CurrentPrice = 1.99M
             };
 
@@ -51,6 +53,12 @@ namespace Acme.Test.Unit.Entities
         public void Fail_Validation_When_CurrentPrice_IsNull()
         {
             Assert.IsFalse(m_invalidProduct.Validate());
+        }
+
+        [TestMethod]
+        public void Return_Name_With_Spaces_Added()
+        {
+            Assert.AreEqual(m_testNameWithSpaces, m_product.ProductName);
         }
     }
 }

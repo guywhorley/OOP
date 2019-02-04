@@ -1,4 +1,5 @@
 ﻿using System;
+using static Acme.Common.StringHandler;
 
 namespace Acme.BL.Entities
 {
@@ -7,6 +8,8 @@ namespace Acme.BL.Entities
     /// </summary>
     public class Product : EntityBase
     {
+        private string _productName;
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -41,13 +44,17 @@ namespace Acme.BL.Entities
         /// <summary>
         /// Product name.
         /// </summary>
-        public string ProductName { get; set; }
+        public string ProductName
+        {
+            get =>  InsertSpaces(_productName);
+            set => _productName = value;
+        }
 
         /// <summary>
         /// Validate required properties.
         /// </summary>
         /// <returns></returns>
-       public override bool Validate() => !string.IsNullOrWhiteSpace(ProductName) && CurrentPrice != null;
+        public override bool Validate() => !string.IsNullOrWhiteSpace(ProductName) && CurrentPrice != null;
 
         public override string ToString() => $"Id:{ProductId}, Name:{ProductName}, Price:{CurrentPrice}";
     }
