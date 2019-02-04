@@ -12,11 +12,11 @@ namespace Acme.Common
     public static class StringHandler
     {
         /// <summary>
-        /// Insert spaces before each capitalized letter.
+        /// String extension method for inserting spaces before each capitalized letter.
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static string InsertSpaces(string source)
+        public static string InsertSpaces(this string source)
         {
             if (string.IsNullOrWhiteSpace(source))
                 return String.Empty;

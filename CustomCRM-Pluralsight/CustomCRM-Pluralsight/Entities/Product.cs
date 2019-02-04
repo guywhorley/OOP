@@ -46,7 +46,7 @@ namespace Acme.BL.Entities
         /// </summary>
         public string ProductName
         {
-            get =>  InsertSpaces(_productName);
+            get => _productName.InsertSpaces();
             set => _productName = value;
         }
 

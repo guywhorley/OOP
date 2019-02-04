@@ -22,29 +22,26 @@ namespace Acme.Test.Unit.Common
         [TestMethod]
         public void Insert_Spaces_Before_Capitalized_Words_And_Trim()
         {
-            // Act
-            string actual = InsertSpaces(m_testNameWithNoSpaces);
-
             // Assert
-            Assert.AreEqual(m_testNameWithSpaces, actual);
+            Assert.AreEqual(m_testNameWithSpaces, m_testNameWithNoSpaces.InsertSpaces());
         }
 
         [TestMethod]
         public void Return_Empty_String_When_Passed_Empty_String()
         {
-            Assert.AreEqual(string.Empty, InsertSpaces(string.Empty));
+            Assert.AreEqual(string.Empty, string.Empty.InsertSpaces());
         }
 
         [TestMethod]
         public void Not_Insert_Additional_Spaces_When_Already_Existing()
         {
-            Assert.AreEqual(m_testNameWithSpaces, InsertSpaces(m_testNameWithSpaces));
+            Assert.AreEqual(m_testNameWithSpaces, m_testNameWithSpaces.InsertSpaces());
         }
 
         [TestMethod]
         public void Handle_All_UpperCase()
         {
-            Assert.AreEqual("A B C", InsertSpaces("ABC"));
+            Assert.AreEqual("A B C", "ABC".InsertSpaces());
         }
     }
 }
