@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.Common;
 
 namespace Acme.BL.Entities
 {
     /// <summary>
     /// Order entity.
     /// </summary>
-    public class Order : EntityBase
+    public class Order : EntityBase, ILoggable
     {
         /// <summary>
         /// Constructor.
@@ -60,6 +61,16 @@ namespace Acme.BL.Entities
 
         ///  <inheritdoc />
         public override string ToString() => $"OrderId:{OrderId}, OrderDate:{OrderDate}";
+
+        /// <summary>
+        /// Return a log entry.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public string Log(string message)
+        {
+            return $"{message}:: Id:{OrderId} OrderDate:{OrderDate.ToString()}";
+        }
     }
 }
     

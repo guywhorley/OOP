@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Acme.BL.Entities;
+using Acme.Common;
 
 namespace Acme.BL.Repositories
 {
@@ -14,6 +15,11 @@ namespace Acme.BL.Repositories
         /// <returns></returns>
         public bool Save(OrderItem orderItem)
         {
+            // log the save...
+            var changedItems = new List<ILoggable>();
+            changedItems.Add(orderItem);
+            LoggingService.WriteToFile(changedItems, "saving orderItem ");
+
             // setting true for testing
             var success = true;
 

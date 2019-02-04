@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using Acme.Common;
 
 namespace Acme.BL.Entities
 {
     /// <summary>
     /// Customer entity.
     /// </summary>
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         /// <summary>
         /// Constructor.
@@ -25,6 +26,20 @@ namespace Acme.BL.Entities
         }
 
         public override string ToString() => $"CustomerId:{CustomerId}, FullName:{FullName}";
+
+        /// <summary>
+        /// Log summary of customer.
+        /// </summary>
+        /// <returns></returns>
+        public string Log(string message)
+        {
+            return $"{message}; {CustomerId}:{FullName} Email:{EmailAddress} Status:{EntityState.ToString()}";
+        }
+
+        /// <summary>
+        /// Custom record state.
+        /// </summary>
+        public EntityStateOptions EntityState { get; set; }
 
         /// <summary>
         /// Customer type.

@@ -1,4 +1,5 @@
 ﻿using System;
+using Acme.Common;
 using static Acme.Common.StringHandler;
 
 namespace Acme.BL.Entities
@@ -6,7 +7,7 @@ namespace Acme.BL.Entities
     /// <summary>
     /// Product entity.
     /// </summary>
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         private string _productName;
 
@@ -25,6 +26,20 @@ namespace Acme.BL.Entities
         {
             ProductId = productId;
         }
+
+        /// <summary>
+        /// Log entry string.
+        /// </summary>
+        /// <returns></returns>
+        public string Log(string message)
+        {
+            return $"{message}; {ProductId}:{ProductName} Detail:{ProductDescription} Status:{EntityState}";
+        }
+
+        /// <summary>
+        /// Active/Deleted flag.
+        /// </summary>
+        public EntityStateOptions EntityState { get; set; }
 
         /// <summary>
         /// Product price.

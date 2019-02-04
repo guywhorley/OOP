@@ -1,9 +1,11 @@
-﻿namespace Acme.BL.Entities
+﻿using Acme.Common;
+
+namespace Acme.BL.Entities
 {
     /// <summary>
     /// Address class for all things addressy.
     /// </summary>
-    public class Address : EntityBase
+    public class Address : EntityBase, ILoggable
     {
         /// <summary>
         /// Constructor.
@@ -22,6 +24,16 @@
         }
 
         public override string ToString() => $"Id:{AddressId}, Type:{AddressType}";
+
+        /// <summary>
+        /// Return a log entry.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public string Log(string message)
+        {
+            return $"{message}; {AddressId}:{StreetLine1}";
+        }
 
         /// <summary>
         /// Address Id.

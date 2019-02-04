@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Acme.BL.Entities;
 using Acme.BL.Views;
+using Acme.Common;
 
 namespace Acme.BL.Repositories
 {
@@ -16,6 +17,11 @@ namespace Acme.BL.Repositories
         /// <returns></returns>
         public bool Save(Order order)
         {
+            // log the save...
+            var changedItems = new List<ILoggable>();
+            changedItems.Add(order);
+            LoggingService.WriteToFile(changedItems, "saving order ");
+
             // setting true for testing
             var success = true;
 

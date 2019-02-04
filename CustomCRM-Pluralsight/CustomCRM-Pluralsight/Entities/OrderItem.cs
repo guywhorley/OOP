@@ -1,9 +1,11 @@
-﻿namespace Acme.BL.Entities
+﻿using Acme.Common;
+
+namespace Acme.BL.Entities
 {
     /// <summary>
     /// OrderItem entity.
     /// </summary>
-    public class OrderItem : EntityBase
+    public class OrderItem : EntityBase, ILoggable
     {
         /// <summary>
         /// Constructor.
@@ -13,6 +15,16 @@
         }
 
         public override string ToString() => $"OrderItemId:{OrderItemId}";
+
+        /// <summary>
+        /// Return log entry.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
+        public string Log(string message)
+        {
+            return $"{message}; {OrderItemId}:{PurchasePrice}";
+        }
 
         /// <summary>
         /// Constructor.
