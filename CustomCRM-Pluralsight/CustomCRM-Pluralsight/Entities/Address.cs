@@ -18,7 +18,7 @@
         /// <param name="addressId"></param>
         public Address(int addressId)
         {
-            this.AddressId = addressId;
+            AddressId = addressId;
         }
 
         public override string ToString() => $"Id:{AddressId}, Type:{AddressType}";
@@ -63,9 +63,6 @@
         /// </summary>
         public string Country { get; set; }
 
-        public override bool Validate()
-        {
-            return AddressId != null;
-        }
+        public override bool Validate() => true;
     }
 }
