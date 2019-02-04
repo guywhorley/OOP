@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Acme.CMS.Entities;
-using Acme.CMS.Views;
+using Acme.BL.Entities;
+using Acme.BL.Views;
 
-namespace Acme.CMS.Repositories
+namespace Acme.BL.Repositories
 {
     /// <summary>
     /// Repository for orders.

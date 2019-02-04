@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Acme.CMS.Repositories;
+﻿using System.Collections.Generic;
 
-namespace Acme.CMS.Entities
+namespace Acme.BL.Entities
 {
     /// <summary>
     /// Customer entity.

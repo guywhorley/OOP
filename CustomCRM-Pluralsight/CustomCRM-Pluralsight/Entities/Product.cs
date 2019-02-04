@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Acme.CMS.Entities
+namespace Acme.BL.Entities
 {
     /// <summary>
     /// Product entity.

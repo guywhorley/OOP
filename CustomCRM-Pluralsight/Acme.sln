@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeCMS", "CustomCRM-Pluralsight\AcmeCMS.csproj", "{0EBD6304-1931-4671-A848-2BD3ADC92CD8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.BL", "CustomCRM-Pluralsight\Acme.BL.csproj", "{0EBD6304-1931-4671-A848-2BD3ADC92CD8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{74360814-C0D7-468C-8E22-1ABF4B95FA40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.CSMTest", "Acme.CSMTest\Acme.CSMTest.csproj", "{E9C80288-6362-476C-A227-55A30DC3CCFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcmeTest", "Acme.CSMTest\AcmeTest.csproj", "{E9C80288-6362-476C-A227-55A30DC3CCFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{8D6B2102-DD59-42BD-A4A0-D50B60B5C713}"
 EndProject

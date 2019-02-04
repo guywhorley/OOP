@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Acme.CMS.Entities;
+﻿using System.Collections.Generic;
+using Acme.BL.Entities;
 
-namespace Acme.CMS.Repositories
+namespace Acme.BL.Repositories
 {
     public class AddressRepository
     {

@@ -1,4 +1,4 @@
-﻿namespace Acme.CMS
+﻿namespace Acme.BL
 {
     class Program
     {

@@ -1,8 +1,7 @@
-﻿using System;
-using Acme.CMS.Repositories;
+﻿using Acme.BL.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Acme.CSMTest.Unit.Repositories
+namespace Acme.Test.Unit.Repositories
 {
     [TestClass]
     public class AddressRepository_Should

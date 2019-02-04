@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Acme.CMS.Entities;
-using Acme.CMS.Repositories;
+﻿using System.Collections.Generic;
+using Acme.BL.Entities;
+using Acme.BL.Repositories;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Acme.CSMTest.Unit.Repositories
+namespace Acme.Test.Unit.Repositories
 {
     [TestClass]
     public class CustomerRespository_Should

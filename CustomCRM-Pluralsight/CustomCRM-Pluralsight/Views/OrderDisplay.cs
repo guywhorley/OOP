@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Acme.CMS.Entities;
+using Acme.BL.Entities;
 
-namespace Acme.CMS.Views
+namespace Acme.BL.Views
 {
     //TODO: Finish comments
     /// <summary>

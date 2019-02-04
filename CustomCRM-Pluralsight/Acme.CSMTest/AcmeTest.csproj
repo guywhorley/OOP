@@ -8,8 +8,8 @@
     <ProjectGuid>{E9C80288-6362-476C-A227-55A30DC3CCFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Acme.CSMTest</RootNamespace>
-    <AssemblyName>Acme.CSMTest</AssemblyName>
+    <RootNamespace>Acme.Test</RootNamespace>
+    <AssemblyName>Acme.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -65,9 +65,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomCRM-Pluralsight\AcmeCMS.csproj">
+    <ProjectReference Include="..\CustomCRM-Pluralsight\Acme.BL.csproj">
       <Project>{0ebd6304-1931-4671-a848-2bd3adc92cd8}</Project>
-      <Name>AcmeCMS</Name>
+      <Name>Acme.BL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

@@ -1,4 +1,4 @@
-﻿namespace Acme.CMS.Entities
+﻿namespace Acme.BL.Entities
 {
     /// <summary>
     /// OrderItem entity.

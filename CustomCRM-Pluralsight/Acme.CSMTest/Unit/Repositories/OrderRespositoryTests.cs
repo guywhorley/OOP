@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Acme.CMS.Entities;
-using Acme.CMS.Repositories;
-using Acme.CMS.Views;
+using Acme.BL.Entities;
+using Acme.BL.Repositories;
+using Acme.BL.Views;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Acme.CSMTest.Unit.Repositories
+namespace Acme.Test.Unit.Repositories
 {
     [TestClass]
     public class OrderRespository_Should

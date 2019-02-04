@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Acme.CMS.Entities;
+using Acme.BL.Entities;
 
-namespace Acme.CMS.Repositories
+namespace Acme.BL.Repositories
 {
     /// <summary>
     /// Repository for order items.

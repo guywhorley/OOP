@@ -1,8 +1,8 @@
 ﻿using System;
-using Acme.CMS.Entities;
+using Acme.BL.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Acme.CSMTest
+namespace Acme.Test.Unit.Entities
 {
     [TestClass]
     public class Customer_Should
